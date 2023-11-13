@@ -6,7 +6,7 @@
  * @fmt: format character
  * Return: number of bytes written
  */
-int unknown(const char fmt)
+int unknown(const char *fmt)
 {
 	int count;
 
@@ -14,6 +14,6 @@ int unknown(const char fmt)
 	/* subject to refactoring */
 	count = 0;
 	count += write(1, "%", 1);
-	count += write(1, &fmt, 1);
+	count += write(1, fmt, 1);
 	return (count);
 }

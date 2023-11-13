@@ -24,8 +24,9 @@ int _printf(const char *fmt, ...)
 			fmt++;
 			action_func = fetch_func(*fmt);
 			if (!action_func)
-				unknown(*fmt);
-			count += action_func(args);
+				count += unknown(fmt);
+			else
+				count += action_func(args);
 		}
 		else
 			count += write(1, fmt, 1);

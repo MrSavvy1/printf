@@ -17,7 +17,7 @@ typedef struct fmt
 /*-----------function_prototypes-----------*/
 int _printf(const char *, ...);
 int (*fetch_func(char))(va_list);
-int unknown(const char);
+int unknown(const char *);
 int _putchar(char);
 
 /*---------action_functions-----------*/
