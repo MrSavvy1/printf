@@ -12,6 +12,8 @@ int _printf(const char *fmt, ...)
 	int count;
 	int (*action_func)(va_list);
 
+	if (!fmt)
+		return (-1);
 	count = 0;
 	va_start(args, fmt);
 
