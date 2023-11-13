@@ -22,6 +22,8 @@ int _printf(const char *fmt, ...)
 		if (*fmt == '%')
 		{
 			fmt++;
+			if (*fmt == '\0')
+				return (-1);
 			action_func = fetch_func(*fmt);
 			if (!action_func)
 				count += unknown(fmt);
