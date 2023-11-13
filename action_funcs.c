@@ -25,8 +25,9 @@ int print_str(va_list args)
 	/* subject to refactoring */
 	/* introduce a strlen func to get the length of the string */
 	/* and call write only once without the need for a loop */
-	while (*s)
+	while (s != NULL && *s)
 		count += write(1, s++, 1);
+	count += write(1, "(null)", 6);
 	return (count);
 }
 
