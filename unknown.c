@@ -4,6 +4,7 @@
  * unknown - this function is called when the character does
  * does not match any valid identifier
  * @fmt: format character
+ * Return: number of bytes written
  */
 int unknown(const char fmt)
 {

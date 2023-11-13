@@ -7,7 +7,7 @@
  */
 int print_char(va_list args)
 {
-	return _putchar(va_arg(args, int));
+	return (_putchar(va_arg(args, int)));
 }
 
 /**
@@ -27,7 +27,7 @@ int print_str(va_list args)
 	/* and call write only once without the need for a loop */
 	while (*s)
 		count += write(1, s++, 1);
-	return count;
+	return (count);
 }
 
 /**
@@ -38,5 +38,5 @@ int print_str(va_list args)
 int print_pcnt(va_list args)
 {
 	(void) args;
-	return _putchar('%');
+	return (_putchar('%'));
 }
