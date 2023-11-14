@@ -7,27 +7,12 @@
 
 int int_binary (va_list args) 
 {
-	unsigned int *zero;
-	int num;
-	int bin;
-	
-	num = 0;
-	zero = va_arg(args, unsigned int *);
-	if (zero == 0)
-	{
-		write(1, &zero, 1);
-		return num++;
-	}
-	
-	bin[32];
-	for (num; zero > 0; )
-	{
-		bin[num++] = zero % 2;
-		zero /= 2;
-	}
-	for (int i = num - 1; i >= 0; i--)
-	{
-		write(1, binary[i], 1);
-	}
-	return num;
+	unsigned int n;
+	int count;
+
+	count = 0;
+	n = va_arg(args, unsigned int);
+	count += _print_digit((long)n, 2);
+
+	return (count);
 }
