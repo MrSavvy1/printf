@@ -6,10 +6,9 @@
  */
 int main(void)
 {
-	int n;
-	n = 0;
-	/*printf("Test what happens with %              printed");*/
-	n = printf("Hello %s, char->%c. This should print a percent %%. Print this number -> %R\n", "Ezekiel", 'z');
-	printf("Number of bytes written is %d\n", n);
+	int n = 0x12;
+
+	_printf("Hello %s, char->%c. This should print a percent %%\n", "Ezekiel", 'z');
+	_printf("Number of bytes written is %d\n", n);
 	return (0);
 }
