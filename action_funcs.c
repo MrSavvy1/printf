@@ -69,10 +69,12 @@ int print_digit(va_list args)
 int print_hex(va_list args)
 {
 	int count;
+	unsigned int n;
 
-	(void) args;
 	count = 0;
-	n = va_arg(args, unsigned int)
+	n = va_arg(args, unsigned int);
+
+	count += _print_digit((long)n, 16);
 
 	return (count);
 }

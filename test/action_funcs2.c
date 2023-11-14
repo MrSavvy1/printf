@@ -7,13 +7,13 @@
 
 int int_binary (va_list args) 
 {
-	int *zero;
+	unsigned int *zero;
 	int num;
 	int bin;
 	
 	num = 0;
-	zero = va_arg(args, unsigned int *)
-	if (zero  == 0)
+	zero = va_arg(args, unsigned int *);
+	if (zero == 0)
 	{
 		write(1, &zero, 1);
 		return num++;

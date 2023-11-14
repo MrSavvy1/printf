@@ -26,7 +26,7 @@ int print_char(va_list);
 int print_str(va_list);
 int print_pcnt(va_list);
 int print_digit(va_list);
-int print_int(va_list);
+int print_hex(va_list);
 
 
 /*-------------action_func_2----------*/
