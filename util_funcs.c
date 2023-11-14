@@ -10,6 +10,7 @@ int (*fetch_func(char c))(va_list)
 {
 	int i;
 	fmt_t fmt_funcs[] = {
+		{'d', print_digit},
 		{'c', print_char},
 		{'s', print_str},
 		{'%', print_pcnt},

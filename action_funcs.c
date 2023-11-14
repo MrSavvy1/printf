@@ -42,3 +42,7 @@ int print_pcnt(va_list args)
 	(void) args;
 	return (_putchar('%'));
 }
+
+/**
+ * print_digit - handles printing of digits
+ */
