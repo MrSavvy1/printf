@@ -14,6 +14,7 @@ int (*fetch_func(char c))(va_list)
 		{'c', print_char},
 		{'s', print_str},
 		{'%', print_pcnt},
+		{'b', int_binary},
 		{'\0', NULL}
 	};
 

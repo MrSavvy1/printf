@@ -26,4 +26,10 @@ int print_str(va_list);
 int print_pcnt(va_list);
 int print_digit(va_list);
 
+
+/*-------------action_func_2----------*/
+int int_binary(va_list);
+
+
+
 #endif /*MAIN_H*/
