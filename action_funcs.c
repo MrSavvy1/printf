@@ -45,4 +45,34 @@ int print_pcnt(va_list args)
 
 /**
  * print_digit - handles printing of digits
+ * @args: list of variable arguments
+ * Return: number of bytes written to stdout
  */
+int print_digit(va_list args)
+{
+	int count;
+	int n;
+
+	count = 0;
+	n = va_arg(args, int);
+
+	count += _print_digit((long)n, 10);
+
+	return (count);
+}
+
+/**
+ * print_int - handles printing integer
+ * @args: list of variables arguments
+ * Return: number of bytes written to stdout
+ */
+int print_hex(va_list args)
+{
+	int count;
+
+	(void) args;
+	count = 0;
+	n = va_arg(args, unsigned int)
+
+	return (count);
+}

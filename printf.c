@@ -34,5 +34,7 @@ int _printf(const char *fmt, ...)
 			count += write(1, fmt, 1);
 		fmt++;
 	}
+
+	va_end(args);
 	return (count);
 }
