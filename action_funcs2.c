@@ -1,11 +1,13 @@
 #include "main.h"
-/*int_binar - writes or converts unsignedinteger
+
+/**
+ * int_binary - writes or converts unsigned integer
  * to binary number
- * @va_list - number of unsigned int
- * Return - The counter for the written byte 
+ * @args: number of unsigned int
+ * Return: The counter for the written byte
 */
 
-int int_binary (va_list args) 
+int int_binary(va_list args)
 {
 	unsigned int n;
 	int count;

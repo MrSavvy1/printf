@@ -62,7 +62,7 @@ int print_digit(va_list args)
 }
 
 /**
- * print_int - handles printing integer
+ * print_hex - handles printing integer
  * @args: list of variables arguments
  * Return: number of bytes written to stdout
  */

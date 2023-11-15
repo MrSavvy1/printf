@@ -33,7 +33,7 @@ int (*fetch_func(char c))(va_list)
 /**
  * _print_digit - a recursive utility function to print
  * digits to different base
- * @n: number to be printed
+ * @num: number to be printed
  * @base: base specifier
  * Return: number of bytes written to stdout
  */
@@ -48,11 +48,10 @@ int _print_digit(long num, int base)
 		_putchar('-');
 		return (_print_digit(-num, base) + 1);
 	}
-	else if (num < base)
+
+	if (num < base)
 		return (_putchar(symbols[num]));
-	else
-	{
-		count = _print_digit(num / base, base);
-		return (count + _print_digit(num % base, base));
-	}
+
+	count = _print_digit(num / base, base);
+	return (count + _print_digit(num % base, base));
 }

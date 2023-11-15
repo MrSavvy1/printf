@@ -19,7 +19,7 @@ int _printf(const char *, ...);
 int (*fetch_func(char))(va_list);
 int unknown(const char *);
 int _putchar(char);
-int _print_digit(long, int);
+int _print_digit(long num, int base);
 
 /*---------action_functions-----------*/
 int print_char(va_list);
