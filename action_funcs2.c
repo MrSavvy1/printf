@@ -96,7 +96,7 @@ int print_custom_str(va_list args)
 			count += write(1, "\\x", 2);
 			if (*s < 16)
 				count += _putchar('0');
-			count += _print_digit((long)(*s), 16);
+			count += _print_digit((long)(*s), 16, UPPER);
 			s++;
 			continue;
 		}
