@@ -34,6 +34,7 @@ int print_hex(va_list);
 int print_hex_caps(va_list);
 int print_oct(va_list);
 int print_unsigned(va_list);
+int print_custom_str(va_list);
 
 
 /*-------------action_func_2----------*/

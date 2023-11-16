@@ -18,6 +18,7 @@ int (*fetch_func(char c))(va_list)
 		{'x', print_hex},
 		{'c', print_char},
 		{'s', print_str},
+		{'S', print_custom_str},
 		{'%', print_pcnt},
 		{'b', int_binary},
 		{'\0', NULL}

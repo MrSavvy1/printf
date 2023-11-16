@@ -69,3 +69,39 @@ int print_unsigned(va_list args)
 
 	return (count);
 }
+
+/**
+ * print_custom_str - prints the string.
+ * Non printable characters (0 < ASCII value < 32 or >= 127) are printed
+ * this way \x, followed by the ASCII code value
+ * in hexadecimal (upper case - always 2 characters)
+ * @args: variable arguments list
+ * Return: number of bytes printed to stdout
+ */
+int print_custom_str(va_list args)
+{
+	int count;
+	char *s;
+
+	count = 0;
+	s = va_arg(args, char *);
+
+	if (s == NULL)
+		return (write(1, "(null)", 6));
+
+	while (*s)
+	{
+		if ((*s > 0 && *s < 32) || *s >= 127)
+		{
+			count += write(1, "\\x", 2);
+			if (*s < 16)
+				count += _putchar('0');
+			count += _print_digit((long)(*s), 16);
+			s++;
+			continue;
+		}
+		count += _putchar(*s);
+		s++;
+	}
+	return (count);
+}
