@@ -11,7 +11,10 @@ int (*fetch_func(char c))(va_list)
 	int i;
 	fmt_t fmt_funcs[] = {
 		{'d', print_digit},
+		{'o', print_oct},
+		{'u', print_unsigned},
 		{'i', print_digit},
+		{'X', print_hex_caps},
 		{'x', print_hex},
 		{'c', print_char},
 		{'s', print_str},
@@ -37,21 +40,35 @@ int (*fetch_func(char c))(va_list)
  * @base: base specifier
  * Return: number of bytes written to stdout
  */
-int _print_digit(long num, int base)
+int _print_digit(long num, int base, ...)
 {
-	int count;
+	int count, cap;
 	char *symbols = "0123456789abcdef";
+	va_list args;
+
+	va_start(args, base);
+	cap = va_arg(args, int);
+
+	if (cap != UPPER && cap != LOWER && cap != DEFAULT)
+		return (_print_digit(num, base, DEFAULT));
 
 	count = 0;
 	if (num < 0)
 	{
 		_putchar('-');
-		return (_print_digit(-num, base) + 1);
+		return (_print_digit(-num, base, cap) + 1);
 	}
 
 	if (num < base)
+	{
+		if (cap == UPPER && symbols[num] >= 97 && symbols[num] <= 122)
+			return (_putchar(symbols[num] - 32));
 		return (_putchar(symbols[num]));
+	}
 
-	count = _print_digit(num / base, base);
-	return (count + _print_digit(num % base, base));
+	count = _print_digit(num / base, base, cap);
+
+	va_end(args);
+
+	return (count + _print_digit(num % base, base, cap));
 }
