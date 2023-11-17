@@ -118,6 +118,10 @@ int print_addr(va_list args)
 
 	count = 0;
 	n = va_arg(args, unsigned long);
+
+	if (!n)
+		return write(1, "(nil)", 5);
+
 	count += write(1, "0x", 2);
 	count += _print_digit((long)n, 16);
 	return (count);
