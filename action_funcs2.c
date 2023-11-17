@@ -105,3 +105,20 @@ int print_custom_str(va_list args)
 	}
 	return (count);
 }
+
+/**
+ * print_addr - prints memory address in hex
+ * @args: variable argument list
+ * Return: number of bytes written to stdout
+ */
+int print_addr(va_list args)
+{
+	int count;
+	unsigned long n;
+
+	count = 0;
+	n = va_arg(args, unsigned long);
+	count += write(1, "0x", 2);
+	count += _print_digit((long)n, 16);
+	return (count);
+}

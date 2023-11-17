@@ -6,12 +6,11 @@
  */
 int main(void)
 {
-	unsigned int n;
+	unsigned long int n;
 
-	n = 127;
-	_printf("Hello %s, char->%c. This should print a percent %%\n", "Ezekiel", 'z');
-	_printf("Number of bytes written is %x\n", n);
+	n = _printf("Hello %s, char->%c. This should print a percent %%\n", "Ezekiel", 'z');
+	_printf("Number of bytes written is %p\n", &n);
 	_printf("Number of bytes written is %X\n", n);
-	printf("Number of bytes written is %x\n", n);
+	printf("Number of bytes written is %p\n", &n);
 	return (0);
 }
