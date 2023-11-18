@@ -21,11 +21,8 @@ int (*fetch_func(char c))(va_list)
 		{'S', print_custom_str},
 		{'%', print_pcnt},
 		{'b', int_binary},
-<<<<<<< HEAD
 		{'r', str_rev},
-=======
 		{'p', print_addr},
->>>>>>> 2630fa26f81cf67642035b74d5b467991d2de2df
 		{'\0', NULL}
 	};
 

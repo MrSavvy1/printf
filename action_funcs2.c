@@ -19,7 +19,7 @@ int int_binary(va_list args)
 	return (count);
 }
 
-<<<<<<< HEAD
+
 /*---------------------------------*/
 
 int str_rev(va_list args)
@@ -34,7 +34,7 @@ int str_rev(va_list args)
 		return (write(1, "(null)", 6));
 	while (*s)
 		count += write(1, --s, 1);
-=======
+
 /**
  * print_hex_caps - prints the character in caps
  * @args: variable arguments list
@@ -140,6 +140,5 @@ int print_addr(va_list args)
 
 	count += write(1, "0x", 2);
 	count += _print_digit((long)n, 16);
->>>>>>> 2630fa26f81cf67642035b74d5b467991d2de2df
 	return (count);
 }
