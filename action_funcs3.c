@@ -1,5 +1,5 @@
-/*---------------------------------*/
-/* str_rev - prints string i a reversed format
+/**
+ * str_rev - prints string i a reversed format
  * @args: variale argument
  * Return: number of byte printed
  */
@@ -10,7 +10,6 @@ int str_rev(va_list args)
 
 	count = 0;
 	s = va_arg(args, char *);
-	
 	if (s == NULL)
 		return (write(1, "(null)", 6));
 	while (*s)
@@ -32,38 +31,3 @@ int print_hex_caps(va_list args)
 
 	return (count);
 }
-
-/**
- * print_oct - prints a number in octal
- * @args: variable argument list
- * Return: number of bytes printed to stdout
- */
-int print_oct(va_list args)
-{
-	unsigned int n;
-	int count;
-
-	count = 0;
-	n = va_arg(args, unsigned int);
-	count += _print_digit((long)n, 8);
-
-	return (count);
-}
-
-/**
- * print_unsigned - prints an unsigned decimal number
- * @args: variable arguments list
- * Return: number of bytes printed to stdout
- */
-int print_unsigned(va_list args)
-{
-	unsigned int n;
-	int count;
-
-	count = 0;
-	n = va_arg(args, unsigned int);
-	count += _print_digit((long)n, 10);
-
-	return (count);
-}
-
