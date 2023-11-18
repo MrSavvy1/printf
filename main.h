@@ -7,6 +7,10 @@
 #include <unistd.h>
 #include <stdio.h>
 
+#define DEFAULT 0
+#define UPPER 1
+#define LOWER 2
+
 /*-------structs---------*/
 typedef struct fmt
 {
@@ -19,7 +23,7 @@ int _printf(const char *, ...);
 int (*fetch_func(char))(va_list);
 int unknown(const char *);
 int _putchar(char);
-int _print_digit(long, int);
+int _print_digit(long num, int base, ...);
 
 /*---------action_functions-----------*/
 int print_char(va_list);
@@ -27,6 +31,11 @@ int print_str(va_list);
 int print_pcnt(va_list);
 int print_digit(va_list);
 int print_hex(va_list);
+int print_hex_caps(va_list);
+int print_oct(va_list);
+int print_unsigned(va_list);
+int print_custom_str(va_list);
+int print_addr(va_list);
 
 
 /*-------------action_func_2----------*/
