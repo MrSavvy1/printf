@@ -17,6 +17,7 @@ int (*fetch_func(char c))(va_list)
 		{'s', print_str},
 		{'%', print_pcnt},
 		{'b', int_binary},
+		{'r', str_rev},
 		{'\0', NULL}
 	};
 

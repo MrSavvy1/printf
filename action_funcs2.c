@@ -16,3 +16,20 @@ int int_binary (va_list args)
 
 	return (count);
 }
+
+/*---------------------------------*/
+
+int str_rev(va_list args)
+{
+	char *s;
+	int count;
+
+	count = 0;
+	s = va_arg(args, char *);
+	
+	if (s == NULL)
+		return (write(1, "(null)", 6));
+	while (*s)
+		count += write(1, --s, 1);
+	return (count);
+}

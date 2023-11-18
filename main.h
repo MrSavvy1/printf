@@ -31,7 +31,7 @@ int print_hex(va_list);
 
 /*-------------action_func_2----------*/
 int int_binary(va_list);
-
+int str_rev(va_list);
 
 
 #endif /*MAIN_H*/
