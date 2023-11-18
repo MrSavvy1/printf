@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * str_rev - prints string i a reversed format
  * @args: variale argument
@@ -14,6 +16,8 @@ int str_rev(va_list args)
 		return (write(1, "(null)", 6));
 	while (*s)
 		count += write(1, --s, 1);
+	return (count);
+}
 
 /**
  * print_hex_caps - prints the character in caps
