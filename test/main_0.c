@@ -11,7 +11,7 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%p", (void *)-1);
+	len = printf("%lu", ULONG_MAX);
 	len2 = printf("%p", (void *)-1);
 	fflush(stdout);
 	if (len != len2)

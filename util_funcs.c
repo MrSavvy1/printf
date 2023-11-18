@@ -58,7 +58,6 @@ int _print_digit(long num, int base, ...)
 	count = 0;
 	if (num < 0)
 	{
-		printf("checkpoint!");
 		_putchar('-');
 		return (_print_digit(-num, base, cap) + 1);
 	}
