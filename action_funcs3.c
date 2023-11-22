@@ -11,7 +11,6 @@ int str_rev(va_list args)
 	int count;
 
 	count = 0;
-	int i = 0;
 	s = va_arg(args, char *);
 	if (s == NULL)
 	{
