@@ -22,6 +22,7 @@ int (*fetch_func(char c))(va_list)
 		{'%', print_pcnt},
 		{'b', int_binary},
 		{'r', str_rev},
+		{'R', printf_rot13},
 		{'p', print_addr},
 		{'\0', NULL}
 	};

@@ -42,6 +42,7 @@ int print_addr(va_list);
 /*-------------action_func_2----------*/
 int int_binary(va_list);
 int str_rev(va_list);
+int printf_rot13(va_list);
 
 
 #endif /*MAIN_H*/
