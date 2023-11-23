@@ -5,7 +5,7 @@
  * @args: variale argument
  * Return: number of byte printed
  */
-int str_rev(va_list args)
+/*int str_rev(va_list args)
 {
 	char *s;
 	int count;
@@ -23,7 +23,7 @@ int str_rev(va_list args)
 	return (count);
 }
 
-
+*/
 /**
  * print_hex_caps - prints the character in caps
  * @args: variable arguments list
